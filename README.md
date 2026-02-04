@@ -4,7 +4,7 @@
 <br>
 
 ## Preview
-<placeholder>
+![Preview](./.preview/preview.gif)
 
 <br>
 
