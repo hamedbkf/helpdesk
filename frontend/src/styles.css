@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --font: system-ui;
+}
+
+*, li {
+    font-family: var(--font) !important;
+}
+
+
+a {
+    font-weight: regular;
+    text-decoration: underline;
+    text-decoration-thickness: .01rem;
+}
+a:hover {
+    font-weight: bold;
+    text-decoration-thickness: .1rem !important;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+button, input[type="submit"] {
+    font-weight: bold;
+}
+button:hover, input[type="submit"]:hover, select:hover {
+    background-color: #eee;
+}
+
+
+select {
+    cursor: pointer;
+    appearance: menulist;
+}
+
+select option:hover {
+  color: red !important;
+}

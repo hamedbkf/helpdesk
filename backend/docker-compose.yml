@@ -1,0 +1,29 @@
+services:
+  db:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=passtheword
+    volumes:
+      - ./postgresql:/var/lib/postgresql
+    ports:
+      - "5432:5432"
+    networks:
+      - network
+  app:
+    build: .
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/helpdesk_db
+      - SPRING_DATASOURCE_USERNAME=user
+      - SPRING_DATASOURCE_PASSWORD=passtheword
+    ports:
+      - "8080:8080"
+    networks:
+      - network
+
+networks:
+  network:
+    driver: bridge
+
