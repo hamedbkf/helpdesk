@@ -54,7 +54,7 @@ import { DatePipe } from '@angular/common';
 
     #ticket_card {
         border: medium solid black;
-        width: 300px;
+        width: 400px;
         height: 300px;
         display: flex;
         flex-direction: column;
@@ -76,11 +76,6 @@ import { DatePipe } from '@angular/common';
         width: 100%;
     }
 
-    #description {
-        flex: 8;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
 
     #ticket_header {
         display: flex;
@@ -99,7 +94,15 @@ import { DatePipe } from '@angular/common';
         overflow: hidden;
         text-overflow: ellipsis;
         flex:3;
-        margin-top: 0 !important;
+        margin: 0 5px !important;
+    }
+
+
+    #description {
+        flex: 8;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0 5px !important;
     }
 
     #last_updated {
